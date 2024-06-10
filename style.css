@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "roboto", sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.data-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.box {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+}
+.player {
+  background-color: purple;
+  bottom: 0;
+  left: 130px;
+}
+#enemy {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  background-color: black;
+  top: 0;
+}
+
+.button-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.button {
+  padding: 10px 25px;
+  background-color: purple;
+  border: none;
+  color: white;
+  align-self: center;
+  margin: 20px 0 10px;
+  cursor: pointer;
+}
+
+.start {
+  background-color: purple;
+}
+.restart {
+  background-color: gray;
+}
+
+.game-area {
+  border: 1px solid black;
+  position: relative;
+  height: 200px;
+  width: 500px;
+  /* overflow: hidden; */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 99px;
+  height: 99px;
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  perspective: 1000px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s; /* Animacja obrotu */
+  transform-style: preserve-3d; /* Zachowanie 3D */
+  position: relative;
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg); /* Obrót karty */
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Ukrycie tylnej strony */
+  border-radius: 8px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.card-front {
+  background-image: url("https://th.bing.com/th/id/OIP.GPnWQwDTOK-Ft3tWv6MOOAHaHk?rs=1&pid=ImgDetMain");
+
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+.card-back {
+  background-color: #fff;
+  transform: rotateY(180deg); /* Obrót tylnej strony */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+.flipped {
+  pointer-events: none;
+}
