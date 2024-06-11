@@ -62,8 +62,8 @@ let timerInterval = null;
 
 function checkDifficulty(buttonId) {
   if (buttonId === "easy") cardsArray = cardsArray.slice(0, 2);
-  if (buttonId === "medium") cardsArray = cardsArray.slice(0, 16);
-  if (buttonId === "hard") cardsArray = cardsArray.slice(0, 22);
+  if (buttonId === "medium") cardsArray = cardsArray.slice(0, 18);
+  if (buttonId === "hard") cardsArray = cardsArray.slice(0, 24);
 }
 
 function flipACard(card) {

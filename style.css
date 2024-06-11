@@ -132,7 +132,7 @@ body {
 }
 
 .card-front {
-  background-image: url("https://th.bing.com/th/id/OIP.GPnWQwDTOK-Ft3tWv6MOOAHaHk?rs=1&pid=ImgDetMain");
+  background-image: url("./images/badge.png");
 
   color: white;
   display: flex;
@@ -143,7 +143,7 @@ body {
 
 .card-back {
   background-color: #fff;
-  transform: rotateY(180deg); /* Obrót tylnej strony */
+  transform: rotateY(180deg);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -155,17 +155,17 @@ body {
 }
 
 .results {
-  background-color: #ffeedd; /* Jasny kolor tła */
-  border: 2px solid #ffcc99; /* Kolorowa ramka */
-  border-radius: 20px; /* Zaokrąglone rogi */
+  background-color: #ffeedd;
+  border: 2px solid #ffcc99;
+  border-radius: 20px;
   padding: 20px;
   margin: 20px auto;
   max-width: 400px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Mocniejszy cień */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   text-align: center;
-  font-family: "Comic Sans MS", "Comic Sans", cursive; /* Zabawna czcionka */
-  color: #333; /* Kolor tekstu */
-  animation: bounce 2s infinite; /* Animacja odbijania */
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  color: #333;
+  animation: bounce 2s infinite;
 }
 
 @keyframes bounce {
@@ -179,19 +179,19 @@ body {
 }
 
 .results .title {
-  font-size: 28px; /* Większa czcionka dla tytułu */
+  font-size: 28px;
   margin-bottom: 15px;
-  color: #ff6347; /* Kolor tytułu */
-  text-shadow: 2px 2px #ffa07a; /* Cień dla tytułu */
+  color: #ff6347;
+  text-shadow: 2px 2px #ffa07a;
 }
 
 .results .item {
   font-size: 20px;
   margin: 10px 0;
-  color: #4682b4; /* Kolor tekstu wyników */
+  color: #4682b4;
 }
 
 .results .item span {
-  font-weight: bold; /* Wyróżnienie wartości wyników */
-  color: #ff4500; /* Kolor dla wartości wyników */
+  font-weight: bold;
+  color: #ff4500;
 }
