@@ -36,18 +36,6 @@ body {
   width: 30px;
   position: absolute;
 }
-.player {
-  background-color: purple;
-  bottom: 0;
-  left: 130px;
-}
-#enemy {
-  height: 30px;
-  width: 30px;
-  position: absolute;
-  background-color: black;
-  top: 0;
-}
 
 .button-box {
   display: flex;
@@ -79,26 +67,21 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.start {
-  background-color: purple;
-}
-.restart {
-  background-color: gray;
-}
-
 .game-area {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   position: relative;
-  height: 200px;
-  width: 500px;
+  /* height: 200px; */
+  max-width: 400px;
+  /* width: 482px; */
   /* overflow: hidden; */
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 
 .card {
-  width: 99px;
-  height: 99px;
+  width: 80px;
+  height: 80px;
   /* border: 1px solid red; */
   display: flex;
   align-items: center;
@@ -132,8 +115,8 @@ body {
 }
 
 .card-front {
-  background-image: url("./images/badge.png");
-
+  background-image: url("./images/dinoPatrolBadge.png");
+  transform: scale(0.8);
   color: white;
   display: flex;
   justify-content: center;

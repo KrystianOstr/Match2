@@ -10,46 +10,42 @@ const difficultyButtons = document.querySelectorAll(
 );
 
 let cardsArray = [
-  { id: 1, symbol: "./images/indianaDog.png" },
-  { id: 1, symbol: "./images/indianaDog.png" },
-  { id: 2, symbol: "./images/cosmoDog.png" },
-  { id: 2, symbol: "./images/cosmoDog.png" },
-  { id: 3, symbol: "./images/policeDog.png" },
-  { id: 3, symbol: "./images/policeDog.png" },
-  { id: 4, symbol: "./images/snowyDog.png" },
-  { id: 4, symbol: "./images/snowyDog.png" },
-  { id: 5, symbol: "./images/firemanDog.png" },
-  { id: 5, symbol: "./images/firemanDog.png" },
-  { id: 6, symbol: "./images/indianaDog.png" },
-  { id: 6, symbol: "./images/indianaDog.png" },
-  { id: 7, symbol: "./images/cosmoDog.png" },
-  { id: 7, symbol: "./images/cosmoDog.png" },
-  { id: 8, symbol: "./images/policeDog.png" },
-  { id: 8, symbol: "./images/policeDog.png" },
-  { id: 9, symbol: "./images/snowyDog.png" },
-  { id: 9, symbol: "./images/snowyDog.png" },
-  { id: 10, symbol: "./images/firemanDog.png" },
-  { id: 10, symbol: "./images/firemanDog.png" },
-  { id: 11, symbol: "./images/indianaDog.png" },
-  { id: 11, symbol: "./images/indianaDog.png" },
-  { id: 12, symbol: "./images/cosmoDog.png" },
-  { id: 12, symbol: "./images/cosmoDog.png" },
-  { id: 13, symbol: "./images/policeDog.png" },
-  { id: 13, symbol: "./images/policeDog.png" },
-  { id: 14, symbol: "./images/snowyDog.png" },
-  { id: 14, symbol: "./images/snowyDog.png" },
-  { id: 15, symbol: "./images/firemanDog.png" },
-  { id: 15, symbol: "./images/firemanDog.png" },
-  { id: 16, symbol: "./images/indianaDog.png" },
-  { id: 16, symbol: "./images/indianaDog.png" },
-  { id: 17, symbol: "./images/cosmoDog.png" },
-  { id: 17, symbol: "./images/cosmoDog.png" },
-  { id: 18, symbol: "./images/policeDog.png" },
-  { id: 18, symbol: "./images/policeDog.png" },
-  { id: 19, symbol: "./images/snowyDog.png" },
-  { id: 19, symbol: "./images/snowyDog.png" },
-  { id: 20, symbol: "./images/firemanDog.png" },
-  { id: 20, symbol: "./images/firemanDog.png" },
+  { id: 1, symbol: "./images/dino1.png" },
+  { id: 1, symbol: "./images/dino1.png" },
+  { id: 2, symbol: "./images/dino2.png" },
+  { id: 2, symbol: "./images/dino2.png" },
+  { id: 3, symbol: "./images/dino3.png" },
+  { id: 3, symbol: "./images/dino3.png" },
+  { id: 4, symbol: "./images/dino4.png" },
+  { id: 4, symbol: "./images/dino4.png" },
+  { id: 5, symbol: "./images/dino5.png" },
+  { id: 5, symbol: "./images/dino5.png" },
+  { id: 6, symbol: "./images/dino6.png" },
+  { id: 6, symbol: "./images/dino6.png" },
+  { id: 7, symbol: "./images/dino7.png" },
+  { id: 7, symbol: "./images/dino7.png" },
+  { id: 8, symbol: "./images/dino8.png" },
+  { id: 8, symbol: "./images/dino8.png" },
+  { id: 9, symbol: "./images/dino9.png" },
+  { id: 9, symbol: "./images/dino9.png" },
+  { id: 10, symbol: "./images/dino10.png" },
+  { id: 10, symbol: "./images/dino10.png" },
+  { id: 11, symbol: "./images/dino11.png" },
+  { id: 11, symbol: "./images/dino11.png" },
+  { id: 12, symbol: "./images/dino12.png" },
+  { id: 12, symbol: "./images/dino12.png" },
+  { id: 13, symbol: "./images/dino13.png" },
+  { id: 13, symbol: "./images/dino13.png" },
+  { id: 14, symbol: "./images/dino14.png" },
+  { id: 14, symbol: "./images/dino14.png" },
+  { id: 15, symbol: "./images/dino15.png" },
+  { id: 15, symbol: "./images/dino15.png" },
+  { id: 16, symbol: "./images/dino16.png" },
+  { id: 16, symbol: "./images/dino16.png" },
+  { id: 17, symbol: "./images/dino17.png" },
+  { id: 17, symbol: "./images/dino17.png" },
+  { id: 18, symbol: "./images/dino18.png" },
+  { id: 18, symbol: "./images/dino18.png" },
 ];
 const flippedCardsArray = [];
 let completedCardsArray = [];
@@ -61,9 +57,9 @@ let movesCounter = 0;
 let timerInterval = null;
 
 function checkDifficulty(buttonId) {
-  if (buttonId === "easy") cardsArray = cardsArray.slice(0, 2);
-  if (buttonId === "medium") cardsArray = cardsArray.slice(0, 18);
-  if (buttonId === "hard") cardsArray = cardsArray.slice(0, 24);
+  if (buttonId === "easy") cardsArray = cardsArray.slice(0, 10);
+  if (buttonId === "medium") cardsArray = cardsArray.slice(0, 14);
+  if (buttonId === "hard") cardsArray = cardsArray.slice(0, 20);
 }
 
 function flipACard(card) {
@@ -127,7 +123,8 @@ function startGame(butonId) {
   innerContainer.classList.remove("hidden");
 
   checkDifficulty(butonId);
-
+  scoreCounter = 100;
+  scoreElement.textContent = scoreCounter;
   timerInterval = setInterval(() => {
     timerCounter += 1;
     timerElement.textContent = timerCounter;
